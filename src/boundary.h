@@ -1,0 +1,29 @@
+#ifndef FLECS_ENET_BOUNDARY_H
+#define FLECS_ENET_BOUNDARY_H
+#include <enet/enet.h>
+#ifdef FLECS_ENET_TESTING
+#include "test_boundary.h"
+#else
+#define fe_initialize enet_initialize
+#define fe_deinitialize enet_deinitialize
+#define fe_host_create enet_host_create
+#define fe_host_destroy enet_host_destroy
+#define fe_host_service enet_host_service
+#define fe_host_connect enet_host_connect
+#define fe_host_flush enet_host_flush
+#define fe_peer_send enet_peer_send
+#define fe_packet_create enet_packet_create
+#define fe_packet_destroy enet_packet_destroy
+#define fe_host_bandwidth_limit enet_host_bandwidth_limit
+#define fe_host_compress enet_host_compress
+#define fe_host_compress_with_range_coder enet_host_compress_with_range_coder
+#define fe_peer_disconnect enet_peer_disconnect
+#define fe_peer_disconnect_now enet_peer_disconnect_now
+#define fe_peer_disconnect_later enet_peer_disconnect_later
+#define fe_peer_reset enet_peer_reset
+#define fe_peer_ping enet_peer_ping
+#define fe_peer_ping_interval enet_peer_ping_interval
+#define fe_peer_timeout enet_peer_timeout
+#define fe_peer_throttle_configure enet_peer_throttle_configure
+#endif
+#endif

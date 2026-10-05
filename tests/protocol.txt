@@ -1,0 +1,12 @@
+world 0
+host 0 0 0 0 0 0 0 0 0
+query host 0 0
+progress
+world 1
+host 0 0 0 0 0 0 0 0 0
+world 0
+counters
+fini
+world 1
+fini
+quit

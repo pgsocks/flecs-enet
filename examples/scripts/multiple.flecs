@@ -1,0 +1,20 @@
+using flecs_enet
+
+client {
+	HostConfig: {peer_limit: 8, channel_limit: 3}
+	Start
+	primary {
+		ConnectionConfig: {
+			address: {ip: [127, 0, 0, 1], port: 9050},
+			channels: 2, data: 7, correlation: 11
+		}
+		Start
+	}
+	secondary {
+		ConnectionConfig: {
+			address: {ip: [127, 0, 0, 1], port: 9051},
+			channels: 3, correlation: 12
+		}
+		Start
+	}
+}

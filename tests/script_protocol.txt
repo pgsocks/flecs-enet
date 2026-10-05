@@ -1,0 +1,16 @@
+world 0
+script 7573696e6720666c6563735f656e65740a636c69656e74207b20486f7374436f6e6669673a207b7d0a72656d6f7465207b20436f6e6e656374696f6e436f6e6669673a207b616464726573733a207b69703a205b3132372c302c302c315d2c20706f72743a20393035307d7d3b205374617274207d207d0a
+bind 0 client
+progress
+status client.remote
+startup client
+progress
+status client
+status client.remote
+progress
+status client.remote
+query peer 0 0
+delete_name client.remote
+query peer 0 0
+fini
+quit

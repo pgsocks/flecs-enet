@@ -1,0 +1,21 @@
+using flecs_enet
+
+client {
+	HostConfig: {
+		incoming_bandwidth: 64000, outgoing_bandwidth: 128000,
+		compression: RangeCoder
+	}
+	PeerConfig: {
+		ping_interval_ms: 1000,
+		timeout_limit: 32, timeout_minimum_ms: 5000,
+		timeout_maximum_ms: 30000,
+		throttle_interval_ms: 5000, acceleration: 2, deceleration: 2
+	}
+	Start
+	server {
+		ConnectionConfig: {address: {ip: [127, 0, 0, 1], port: 9050}}
+		// Replace host defaults; retain ENet timeout/throttle defaults.
+		PeerConfig: {ping_interval_ms: 500}
+		Start
+	}
+}

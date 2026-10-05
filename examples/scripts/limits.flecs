@@ -1,0 +1,15 @@
+using flecs_enet
+
+server {
+	HostConfig: {
+		listen: true, address: {ip: [127, 0, 0, 1]},
+		compression: None, peer_limit: 16, channel_limit: 2,
+		limits: {
+			max_requests: 128, max_events: 256,
+			max_outgoing_packets: 512, events_per_progress: 32,
+			max_packet_bytes: 65536, max_event_bytes: 4194304,
+			max_outgoing_bytes: 4194304, max_waiting_bytes: 4194304
+		}
+	}
+	Start
+}

@@ -1,0 +1,13 @@
+using flecs_enet
+
+client {
+	HostConfig: {}
+	Start
+	server {
+		ConnectionConfig: {
+			address: {ip: [127, 0, 0, 1], port: 9050},
+			correlation: 1
+		}
+		Start
+	}
+}

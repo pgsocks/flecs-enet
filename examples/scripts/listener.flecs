@@ -1,0 +1,9 @@
+using flecs_enet
+
+server {
+	HostConfig: {
+		listen: true,
+		address: {ip: [127, 0, 0, 1], port: 9050}
+	}
+	Start
+}
